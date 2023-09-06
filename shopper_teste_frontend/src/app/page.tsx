@@ -6,18 +6,32 @@ import Dropzone from 'react-dropzone'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <div className={styles.center}>
         <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
           {({ getRootProps, getInputProps }) => (
             <section>
-              <div {...getRootProps()}>
+              <div {...getRootProps()} className={styles.dropzone}>
                 <input {...getInputProps()} />
-                <p>Drag n drop some files here, or click to select files</p>
+                <p>Arraste e solte o arquivo aqui ou clique para selecionar arquivo.</p>
               </div>
             </section>
           )}
         </Dropzone>
-        
+      </div>
+    </main>
+  )
+}
+
+/*
+"use client"
+import Image from 'next/image'
+import styles from './page.module.css'
+import Dropzone from 'react-dropzone'
+
+export default function Home() {
+  return (
+    <main className={styles.main}>
+      <div className={styles.description}>        
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -102,3 +116,4 @@ export default function Home() {
     </main>
   )
 }
+*/
