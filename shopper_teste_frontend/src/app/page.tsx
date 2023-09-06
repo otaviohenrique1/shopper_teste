@@ -2,8 +2,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Dropzone from 'react-dropzone'
+import csv from 'csv-parser';
+import { useState } from 'react';
 
 export default function Home() {
+  const [csvData, setCsvData] = useState([]);
+
   return (
     <main className={styles.main}>
       <div className={styles.center}>
