@@ -1,7 +1,22 @@
+import { AppDataSource } from "./data-source";
+import express from "express";
+
+AppDataSource
+  .initialize()
+  .then(() => {
+    console.log("Data Source has been initialized!");
+  })
+  .catch(error => {
+    console.log("Error during Data Source initialization:", error);
+  });
+
+/*
 import { AppDataSource } from "./data-source"
 import { User } from "./entity/User"
 
-AppDataSource.initialize().then(async () => {
+AppDataSource
+  .initialize()
+  .then(async () => {
 
     console.log("Inserting a new user into the database...")
     const user = new User()
@@ -16,5 +31,8 @@ AppDataSource.initialize().then(async () => {
     console.log("Loaded users: ", users)
 
     console.log("Here you can setup and run express / fastify / any other framework.")
-
-}).catch(error => console.log(error))
+  })
+  .catch(error => {
+    console.log(error);
+  });
+*/
