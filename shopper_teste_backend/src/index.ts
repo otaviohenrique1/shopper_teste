@@ -1,5 +1,6 @@
 import { AppDataSource } from "./data-source";
 import express from "express";
+import cors from "cors";
 
 AppDataSource
   .initialize()
@@ -9,6 +10,12 @@ AppDataSource
   .catch(error => {
     console.log("Error during Data Source initialization:", error);
   });
+
+const app = express();
+app.use(express.json());
+app.use(cors);
+
+
 
 /*
 import { AppDataSource } from "./data-source"

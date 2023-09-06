@@ -11,6 +11,6 @@ export class Product {
   @Column()
   cost_price: number;
 
-  @Column({ type: "decimal", })
+  @Column()
   sales_price: number;
 }
