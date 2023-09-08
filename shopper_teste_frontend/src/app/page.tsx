@@ -56,6 +56,7 @@ export default function Home() {
           )}
         </Dropzone>
       </div>
+      <button>Validar</button>
       {csvData.length > 0 && (
         <div>
           <h3>Dados CSV:</h3>
